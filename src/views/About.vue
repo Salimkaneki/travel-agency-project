@@ -2,8 +2,8 @@
   <div class="about-page">
     <header class="hero">
       <div class="hero-content">
-        <h1 class="fade-in">Voyage Dreams</h1>
-        <p class="hero-subtitle">Créateur d'expériences de voyage depuis 2010</p>
+        <h1 class="fade-in">Découvrez le monde avec nous</h1>
+        <p class="hero-subtitle">Une aventure unique vous attend depuis 2010</p>
       </div>
     </header>
 
@@ -123,13 +123,14 @@ export default {
 
 <style scoped>
 .about-page {
-  color: #2C3E50;
+  color: #1a1a1a;
+  background: linear-gradient(to bottom right, #f8f9ff, #ffffff);
 }
 
 .hero {
   height: 70vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-              #3498DB;  /* Couleur de fond au lieu d'une image */
+  background: linear-gradient(rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.2)),
+              linear-gradient(45deg, #2563EB, #3B82F6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,23 +144,26 @@ export default {
 }
 
 .hero h1 {
-  font-size: 4rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .stats-section {
   display: flex;
   justify-content: space-around;
   padding: 4rem 2rem;
-  background-color: #F8F9FA;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .stat {
@@ -169,18 +173,18 @@ export default {
 .stat-value {
   display: block;
   font-size: 2.5rem;
-  font-weight: 300;
-  color: #3498DB;
+  font-weight: 600;
+  color: #2563EB;
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
   font-size: 1rem;
-  color: #6C757D;
+  color: #4B5563;
 }
 
 .content-wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -191,14 +195,24 @@ section {
 
 section h2 {
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 3rem;
-  color: #2C3E50;
+  color: #1a1a1a;
+  position: relative;
 }
 
-.mission-section {
-  background-color: white;
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 8px;
+  background: linear-gradient(90deg, #3B82F6, #60A5FA);
+  border-radius: 4px;
+  opacity: 0.3;
 }
 
 .mission-content {
@@ -206,12 +220,8 @@ section h2 {
   margin: 0 auto;
   text-align: center;
   font-size: 1.2rem;
-  line-height: 1.8;
-  color: #6C757D;
-}
-
-.services-section {
-  background-color: #F8F9FA;
+  line-height: 1.7;
+  color: #4B5563;
 }
 
 .services-grid {
@@ -224,31 +234,38 @@ section h2 {
   background: white;
   padding: 3rem 2rem;
   text-align: center;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
 }
+
 
 .service-card i {
   font-size: 2.5rem;
-  color: #3498DB;
+  background: linear-gradient(45deg, #2563EB, #3B82F6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Propriété standard au lieu de text-fill-color */
   margin-bottom: 1.5rem;
 }
+
 
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .service-card p {
-  color: #6C757D;
-  line-height: 1.6;
+  color: #4B5563;
+  line-height: 1.7;
 }
 
 .team-grid {
@@ -266,14 +283,15 @@ section h2 {
   height: 200px;
   margin: 0 auto 1.5rem;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .member-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .team-card:hover .member-image img {
@@ -283,26 +301,28 @@ section h2 {
 .member-info h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 .member-role {
-  color: #3498DB;
+  color: #2563EB;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .member-languages {
   font-size: 0.9rem;
-  color: #6C757D;
+  color: #4B5563;
 }
 
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .stats-section {
